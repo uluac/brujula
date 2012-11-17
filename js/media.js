@@ -129,16 +129,16 @@ function inspeccionar(obj)
   return msg;
 }
 document.addEventListener("deviceready", function(){
-	var options = { limit: 2 };
+	/*var options = { limit: 2 };
 	navigator.device.capture.captureVideo(function(mediaFiles){
 		for(i=0;i<mediaFiles.length;i++){
 			$('body').append(mediaFiles[i].fullPath+'<br>');
 		}
 	}, function(err){
 		alert(err.code);
-	}, options);
+	}, options);*/
 	function onSuccess(heading) {
-		alert('Heading: ' + heading.magneticHeading);
+		$('brujula').text(heading.magneticHeading);
 	};
 	
 	function onError(error) {
